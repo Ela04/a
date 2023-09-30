@@ -19,4 +19,5 @@ export class MsjComponent  implements OnInit {
   this.state.obtenerMsj().subscribe((msj)=>{
     debugger;
   }) 
+
 }
