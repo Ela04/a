@@ -6,7 +6,8 @@ import { HomePage } from './home.page';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MsjModule } from '../msj/msj.module';
-
+import { HttpClientModule} from '@angular/common/http';
+import { ServicioService } from '../service/servicio.service';
 
 @NgModule({
   imports: [
@@ -15,8 +16,10 @@ import { MsjModule } from '../msj/msj.module';
     IonicModule,
     ReactiveFormsModule,
     MsjModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [ServicioService],
 })
 export class HomePageModule {}
