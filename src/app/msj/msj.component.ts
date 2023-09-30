@@ -13,11 +13,11 @@ export class MsjComponent  implements OnInit {
 
   constructor(private state: StateService) { }
 
-  ngOnInit() {}
-  //this.msj$ = this.state.obtenermsj();
-  
-  this.state.obtenerMsj().subscribe((msj)=>{
-    debugger;
-  }) 
-
+  ngOnInit() {
+    //this.msj$ = this.state.obtenermsj();
+    this.state.obtenerMsj().subscribe((msj)=>{
+      debugger;
+    })
+  }
+   
 }

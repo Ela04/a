@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { StateService } from '../servicio/state.service';
+import { ServicioService } from '../service/servicio.service';
+import { Url } from 'url';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +12,18 @@ import { StateService } from '../servicio/state.service';
 export class HomePage implements OnInit{
   formela: FormGroup;
 
-  constructor(private fb:FormBuilder, private stateService:StateService){
+  constructor(private fb:FormBuilder, private stateService:StateService, private rickymorty: ServicioService){
     this.formela=this.fb.group({
       texto:[""]
     })
   }
 
   ngOnInit(){
+    const ola={
+      array: Ñthis.rickymorty.getCharacters().subscribe((res:any)=>{
+      })
+    }
+    console.log(ola)
   }
 
   grabar(){
