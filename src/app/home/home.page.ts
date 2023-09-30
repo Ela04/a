@@ -11,7 +11,7 @@ import { Url } from 'url';
 })
 export class HomePage implements OnInit{
   formela: FormGroup;
-  personajes!: Array;
+  //personajes!: Array;
   constructor(private fb:FormBuilder, private stateService:StateService, private rickymorty: ServicioService){
     this.formela=this.fb.group({
       texto:[""]
