@@ -1,0 +1,24 @@
+git config --global user.email "ga.antunez@duocuc.cl"
+git config --global user.name "Ela04"
+git add .
+git commit -m "comentario"
+git branch
+git checkout estudiante
+git add .
+git commit -m "comentario"
+git checkout main
+git merge estudiante
+git push u- origin estudiante
+git push
+git pull
+
+------------------
+-Ionic, framework(marco de trabajo, esqueleto) completo e hibrido, accesible, documentación, 
+-Componente: pequeño trozo reutilizable
+-Modulo: Almacena componentes, directivas .Contiene todo lo necesario
+-Guardian: metodo de seguridad
+-Estado: guarda temporalmente info para enviar
+-Inyeccion: importa lo necesario
+-Persistencia de datos: datos duplicados?
+-Rooting, especifica el nombre de la ruta(path), rescata un modulo y luego un componente. 
+Diferencia entre un estado y una promesa, 
