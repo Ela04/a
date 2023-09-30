@@ -11,7 +11,7 @@ import { Url } from 'url';
 })
 export class HomePage implements OnInit{
   formela: FormGroup;
-
+  personajes!: Array;
   constructor(private fb:FormBuilder, private stateService:StateService, private rickymorty: ServicioService){
     this.formela=this.fb.group({
       texto:[""]
@@ -19,11 +19,9 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit(){
-    const ola={
-      array: Ñthis.rickymorty.getCharacters().subscribe((res:any)=>{
-      })
+    this.rickymorty.getCharacters().subscribe((res:any)=>{
     }
-    console.log(ola)
+
   }
 
   grabar(){

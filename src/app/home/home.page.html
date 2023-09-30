@@ -17,3 +17,9 @@
   <ion-button (click)="grabar()" expand="block">Cambiar</ion-button>
   <ion-button (click)="borrar()" expand="block">Borrar</ion-button>
 </ion-content>  -->
+
+<ion-content>
+  <div *ngFor="let item of personajes">
+    <p>{{item.name}}</p>
+  </div>
+</ion-content>
