@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { StateService } from '../servicio/state.service';
 import { ServicioService } from '../service/servicio.service';
-import { Url } from 'url';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +22,7 @@ export class HomePage implements OnInit{
     })
 
   }
-
+  
   grabar(){
     console.log("Ingresando a la funcion")
     const ela={

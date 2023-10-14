@@ -24,5 +24,7 @@ git pull
 Diferencia entre un estado y una promesa, 
 
 ----------------------------------------
+ionic -v
+angular -v
 npm cache clean --force
-npm i
+npm install -g @angular/cli
