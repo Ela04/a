@@ -27,8 +27,8 @@ export class HomePage implements OnInit{
   }
 
   //Link a detaller
-  IrADetalle(){
-    this.servi.setPersonaje(this.personajes);
+  IrADetalle(personaje:any){
+    this.servi.setPersonaje(personaje);
     this.router.navigateByUrl('/detalle');
   }
 

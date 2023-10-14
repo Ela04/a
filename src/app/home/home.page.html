@@ -29,6 +29,6 @@
 <ion-content><!-- ? puede ser cualquier dato, .results -->
   <div *ngFor="let personaje of personajes?.results">
     <p>{{personaje.name}}</p>
-    <ion-button type="button" (click)="IrADetalle(personaje)">Detalle</ion-button>
+    <button type="button" (click)="IrADetalle(personaje)">Detalle</button>
   </div>
 </ion-content>

@@ -16,10 +16,10 @@ git pull
 -Ionic, framework(marco de trabajo, esqueleto) completo e hibrido, accesible, documentación, 
 -Componente: pequeño trozo reutilizable
 -Modulo: Almacena componentes, directivas .Contiene todo lo necesario
--Guardian: metodo de seguridad
+-Guardian: metodo de seguridad, protege la ruta (route guards)
 -Estado: guarda temporalmente info para enviar
 -Inyeccion: importa lo necesario
--Persistencia de datos: datos duplicados?
+-Persistencia de datos: 
 -Rooting, especifica el nombre de la ruta(path), rescata un modulo y luego un componente. 
 Diferencia entre un estado y una promesa, 
 
