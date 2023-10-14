@@ -8,7 +8,9 @@ import { Observable } from 'rxjs'; //libreria
 export class ServicioService {
   constructor(private http: HttpClient) {}
 
+  //OBTENER PERSONAJES
   getCharacters():Observable<any>{
+    //retorna todos los personajes
     return this.http.get('https://rickandmortyapi.com/api/character');
   }
 }

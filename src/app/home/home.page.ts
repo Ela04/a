@@ -9,21 +9,21 @@ import { ServicioService } from '../service/servicio.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-  formela: FormGroup;
-  //personajes!: Array;
-  constructor(private fb:FormBuilder, private stateService:StateService, private rickymorty: ServicioService){
-    this.formela=this.fb.group({
-      texto:[""]
-    })
-  }
-
-  ngOnInit(){
-    this.rickymorty.getCharacters().subscribe((res:any)=>{
-    })
-
-  }
+  public personajes:any
   
-  grabar(){
+  constructor( 
+    private rickymorty: ServicioService){}
+
+  //Componente nace
+  ngOnInit(){
+    //Muestra en consola los personajes
+    this.rickymorty.getCharacters().subscribe((data)=>{
+      this.personajes = data
+      console.log(data);
+    })
+  }
+
+  /*grabar(){
     console.log("Ingresando a la funcion")
     const ela={
       text:this.formela.get('text')?.value,
@@ -36,6 +36,5 @@ export class HomePage implements OnInit{
     this.stateService.cambiarMsj('');
     //
     this.formela.reset();
-  }
-
+  }*/
 }

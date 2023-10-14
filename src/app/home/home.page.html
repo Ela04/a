@@ -18,8 +18,16 @@
   <ion-button (click)="borrar()" expand="block">Borrar</ion-button>
 </ion-content>  -->
 
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div *ngFor="let item of personajes">
-    <p>{{item.name}}</p>
+  <div *ngFor="let personaje of personajes">
+    <p>{{personaje.name}}</p>
   </div>
 </ion-content>
