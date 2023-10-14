@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioService } from '../services/servicio.service';
 
 @Component({
   selector: 'app-detalle',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalle.page.scss'],
 })
 export class DetallePage implements OnInit {
-
-  constructor() { }
+  public detalle:any
+  constructor(
+    private serv:ServicioService
+  ){}
 
   ngOnInit() {
+    this.serv.getPersonaje().subscribe((pers)=>{
+      this.detalle = pers;
+    })
   }
 
 }

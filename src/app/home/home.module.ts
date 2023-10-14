@@ -5,21 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { MsjModule } from '../msj/msj.module';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ServicioService } from '../service/servicio.service';
+import { apiService } from '../service/api.service';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MsjModule,
     HomePageRoutingModule,
     HttpClientModule,
   ],
   declarations: [HomePage],
-  providers: [ServicioService],
+  providers: [apiService],
 })
 export class HomePageModule {}

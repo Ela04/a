@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { StateService } from '../servicio/state.service';
-import { ServicioService } from '../service/servicio.service';
+import { Router } from '@angular/router';
+import { apiService } from '../service/api.service';
+import { ServicioService } from '../services/servicio.service';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +12,27 @@ export class HomePage implements OnInit{
   public personajes:any
   
   constructor( 
-    private rickymorty: ServicioService){}
+    private rickymorty: apiService,
+    private router: Router,
+    private servi: ServicioService
+  ){}
 
   //Componente nace
   ngOnInit(){
     //Muestra en consola los personajes
     this.rickymorty.getCharacters().subscribe((data)=>{
       this.personajes = data
-      console.log(data);
+      console.log('si',data);
     })
   }
+
+  //Link a detaller
+  IrADetalle(){
+    this.servi.setPersonaje(this.personajes);
+    this.router.navigateByUrl('/detalle');
+  }
+
+
 
   /*grabar(){
     console.log("Ingresando a la funcion")
