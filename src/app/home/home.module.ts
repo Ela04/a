@@ -6,7 +6,8 @@ import { HomePage } from './home.page';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomePageRoutingModule } from './home-routing.module';
 import { MsjModule } from '../msj/msj.module';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ServicioService } from '../service/servicio.service';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ServicioService } from '../service/servicio.service';
     ReactiveFormsModule,
     MsjModule,
     HomePageRoutingModule,
+    HttpClient,
     HttpClientModule
   ],
   declarations: [HomePage],

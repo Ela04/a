@@ -12,7 +12,7 @@ git push u- origin estudiante
 git push
 git pull
 
-------------------
+----------------------------------------
 -Ionic, framework(marco de trabajo, esqueleto) completo e hibrido, accesible, documentación, 
 -Componente: pequeño trozo reutilizable
 -Modulo: Almacena componentes, directivas .Contiene todo lo necesario
@@ -22,3 +22,7 @@ git pull
 -Persistencia de datos: datos duplicados?
 -Rooting, especifica el nombre de la ruta(path), rescata un modulo y luego un componente. 
 Diferencia entre un estado y una promesa, 
+
+----------------------------------------
+npm cache clean --force
+npm i
